@@ -1,0 +1,26 @@
+
+<h1>E-Steak @epitechNantes</h1>
+
+<hr/>
+
+<h2>Your shopping cart :</h2>
+<table>
+  <tr>
+    <td><img src="{{ product.picture}}" /></td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+  </tr>
+</table>
+
+<hr/>
+
+<h2>Please, to valid your purchase, enter your login and your ppp :</h2>
+
+<form action="/valid/{{ product._id }}" method="post">
+  <label>Login :</label>
+  <input type="text" name="login" />
+  <label>Password (ppp) :</label>
+  <input type="password" name="passwd" />
+  <br/>
+  <input type="submit" />
+</form>

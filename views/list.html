@@ -1,0 +1,27 @@
+
+<h1>Liste des achats</h1>
+
+<table>
+  <tr style="font-weight:bold;">
+    <td>DATE</td>
+    <td>PRODUCT</td>
+    <td>PRICE</td>
+    <td>LOGIN</td>
+    <td>WEIGHT</td>
+    <td>REFERENCE</td>
+  </tr>
+  {% for purchase in purchases %}
+  <tr>
+    <td>{{ purchase.date }}</td>
+    <td>{{ purchase.product.name }}</td>
+    <td>{{ purchase.product.price }} €</td>
+    <td>{{ purchase.login }}</td>
+    <td>{{ purchase.product.weight }}</td>
+    <td>{{ purchase.product.reference }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<style>
+  td { width: 250px; text-align: center; border:1px solid black; }
+</style>

@@ -1,0 +1,66 @@
+
+<h1>TODAY :</h1>
+
+<h2>Liste de courses :</h2>
+<table>
+  <tr style="font-weight:bold;">
+    <td>REFERENCE</td>
+    <td>PRODUCT</td>
+    <td>HOW MANY ?</td>
+  </tr>
+  {% for product in products %}
+  <tr>
+    <td>{{ product.reference }}</td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.nbr }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+
+
+
+
+
+<h2>Details :</h2>
+<table>
+  <tr style="font-weight:bold;">
+    <td>DATE</td>
+    <td>PRODUCT</td>
+    <td>PRICE</td>
+    <td>LOGIN</td>
+    <td>WEIGHT</td>
+    <td>REFERENCE</td>
+  </tr>
+  {% for purchase in purchases %}
+  <tr>
+    <td>{{ purchase.date }}</td>
+    <td>{{ purchase.prod.name }}</td>
+    <td>{{ purchase.prod.price }} €</td>
+    <td>{{ purchase.login }}</td>
+    <td>{{ purchase.prod.weight }}</td>
+    <td>{{ purchase.prod.reference }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+
+
+
+
+
+
+<h2>Emails :</h2>
+{% for purchase in purchases %}
+{{ purchase.login }}@epitech.eu;&nbsp;
+{% endfor %}
+
+
+
+
+
+<style>
+  td { width: 250px; text-align: center; border:1px solid black; }
+</style>

@@ -1,0 +1,33 @@
+<!--
+** c'est pas bien de regarder les sources !
+** ;-)
+-->
+
+<h1>E-Steak @epitechNantes</h1>
+
+<table>
+  <tr style="font-weight:bold;">
+    <td>BUY</td>
+    <td>PICTURE</td>
+    <td>PRODUCT</td>
+    <td>PRICE</td>
+    <td>WEIGHT</td>
+    <td>REFERENCE</td>
+  </tr>
+  {% for product in products %}
+  <tr>
+    <td><form method="post" action="/buy/{{ product._id }}"><input type="submit" value="Commander"/></form></td>
+    <td><img src="{{ product.picture}}" /></td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }} €</td>
+    <td>{{ product.weight }}</td>
+    <td>{{ product.reference }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<div style="margin-left:auto;font-style:italic;">A node.js app by berthe_s</div>
+
+<style>
+  img { width : 300px; }
+  td { width: 250px; text-align: center; border:1px solid black; }
+</style>
