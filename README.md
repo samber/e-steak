@@ -26,16 +26,8 @@ E-steak service for Epitech Nantes
 - node app.js
 
 ################## WITH NGINX : ####################
-- edit /etc/nginx/sites-enabled/esteak :
-    server {
-    	   listen 80;
-    	   server_name esteak.bde-epitech-nantes.fr;
-    	   access_log /var/log/nginx/esteak.log;
-    	   location / {
-           	    proxy_pass    http://127.0.0.1:3000/;
-    		    }
-      	   }
-- service nginx restart
+- $> cp esteak.nginx /etc/nginx/sites-enabled/
+- $> service nginx restart
 
 }
 
