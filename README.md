@@ -22,8 +22,10 @@ E-steak service for Epitech Nantes
 	picture:'http://niouzesetweberies.files.wordpress.com/2011/02/petit-poney-rose-1443602d60.png',
       },
       ...
-- mongoimport --db esteak --collection products --type json --file data.json
-- node app.js
+- $> mongoimport --db esteak --collection products --type json --file data.json
+- $> node app.js
+- edit config.js to send confirmation on each purchase
+
 
 ################## WITH NGINX : ####################
 - $> cp esteak.nginx /etc/nginx/sites-enabled/
